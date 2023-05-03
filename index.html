@@ -1,106 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  
-
-    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-
-    <meta name="apple-mobile-web-app-title" content="CodePen">
-
-    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
-
-    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
-
-
-
-  
-  <title>CodePen - Js DOOM running on browser</title>
-  
-  
-  
-  
+<title>HTML Full-screen iframe (100% Height and Width)</title>
 <style>
-html,body{
-  min-height:100%
-}
-body {
-  font-family:sans-serif;
-  text-align: center;
-  background: #111 url(https://goo.gl/D1AeUS) center no-repeat;
-  background-size:cover;
-  color:#aaa
-}
-#dosbox:hover .dosbox-start{
-  opacity:1
-}
-#dosbox .dosbox-start {
-  background:url(https://goo.gl/LiSWVh) center no-repeat;
-  background-size:150px;
-  height:100%;
-  image-rendering:pixelated;
-  top:4% !important;
-  color: rgba(0,0,0,0);
-  filter: drop-shadow(0px 0px 8px rgba(255,255,255,.95));
-  opacity:0
-}
-.dosbox-powered {
-  opacity: 0;
-}
-.dosbox-container {
-  background: #000 url(https://goo.gl/aZVGdQ) center no-repeat;
-  margin: 10% auto 0 auto;
-  width: 640px;
-  height: 400px;
-}
-.dosbox-container > .dosbox-overlay {
-  background: url(https://js-dos.com/cdn/doom_2.png);
-}
-button{
-  background:#a00;
-  border:0;
-  padding:5px 15px;
-  cursor:pointer;
-  font-weight:700
-}
-p{
-  font-size:11px
-}
-a{
-  color:#aaa
-}
+    body{
+        margin: 0; /* Remove default margin */
+    }
+    iframe{      
+        display: block;  /* iframes are inline by default */   
+        height: 100vh;  /* Set height to 100% of the viewport height */   
+        width: 100vw;  /* Set width to 100% of the viewport width */     
+        border: none; /* Remove default border */
+        background: lightyellow; /* Just for styling */
+    }
 </style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
 </head>
-
-<body translate="no">
-  <div id="dosbox"></div>
-    <br/>
-    <button onclick="dosbox.requestFullScreen();">Make fullscreen</button><br>
-<p>Click on Screen, Press Enter to start<br>
-  Arrows to move, Space to use, Ctrl to Fire<br><a href="http://doom.wikia.com/wiki/Controls" target=_b>More controls</a></p>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-
-  <script src='https://js-dos.com/cdn/js-dos-api.js'></script>
-      <script id="rendered-js" >
-var dosbox = new Dosbox({
-  id: "dosbox",
-  onload: function (dosbox) {dosbox.run("https://cdn.rawgit.com/darrengruber/docker-em-dosbox-doom/afad47b2/doom_shareware/doom19s_deiced.zip", "./DOOM.EXE");
-  },
-  onrun: function (dosbox, app) {
-    console.log("App '" + app + "' is runned");
-  } });
-//# sourceURL=pen.js
-    </script>
-
-  
+<body>
+    <iframe src="https://cdpn.io/nodws/fullpage/VWOLPZ?view="></iframe>
 </body>
-
 </html>
